@@ -1,0 +1,97 @@
+/*
+#Buttons
+
+The default buttons used across the theme
+
+Markup:
+<button class="pure-button">button</button>
+<button class="pure-button pure-button--success">success button</button>
+<button class="pure-button pure-button--error">error button</button>
+<button class="pure-button pure-button--warning">warning button</button>
+<button class="pure-button pure-button--secondary">secondary button</button>
+<button class="pure-button pure-button--primary">primary button</button>
+
+Styleguide 4.2
+*/
+
+.pure-button {
+    font-family: $font-sans-serif;
+    font-size: 24px;
+    background-color: transparent;
+    border: 2px solid transparent;
+	border-radius: 2px;
+	color: $font-color;
+	padding: 10px 30px;
+
+	// normalize inner elements
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		-webkit-appearance: none;
+		display: block;
+		background: none;
+		border: none;
+		color: inherit;
+	}
+
+	&--primary {
+        color: $primary-color;
+        border-color: $primary-color;
+	}
+
+    &--inverse {
+        color: $color-white;
+        border-color: $color-white;
+	}
+
+	&--success {
+        color: $success-color;
+        border-color: $success-color;
+	}
+
+	&--error {
+        color: $error-color;
+        border-color: $error-color;
+	}
+
+	&--warning {
+        color: $warning-color;
+        border-color: $warning-color;
+	}
+
+	&--secondary {
+        color: $secondary-color;
+        border-color: $secondary-color;
+	}
+
+	&--xs {
+		font-size: 70%;
+	}
+
+	&--s {
+		font-size: 85%;
+	}
+
+	&--l {
+		font-size: 110%;
+	}
+
+	&--xl {
+		font-size: 125%;
+	}
+
+	&--pill {
+		border-radius: 40px;
+		padding: 0.3em 1em;
+	}
+}
+
+h1, h2, h3 {
+	a.pure-button--with-heading {
+		margin-left: 20px;
+		font-size: 15px;
+		line-height: 1em;
+		vertical-align: middle;
+	}
+}

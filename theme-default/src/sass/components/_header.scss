@@ -1,0 +1,170 @@
+/*
+#Header
+
+Header
+
+Template: Includes/Header
+
+Styleguide 6.2
+
+*/
+
+$header-height-small: 80px !default;
+$header-height-not-small: 90px !default;
+$header-bg: $default-color;
+$header-color: $color-mind-shaft;
+
+$icon-width: 33px !default;
+$icon-height: 21px !default;
+$icon-bar-height: 3px !default;
+$icon-bar-spacing: ($icon-height - ($icon-bar-height * 3)) / 2 !default;
+
+// All colour values are placeholders for now.
+// TODO: Implement dynamicaly changing colours.
+.header {
+    display: flex;
+    flex-direction: column;
+    height: $header-height-small;
+    padding: 0 25px;
+    color: $header-color;
+    background-color: $header-bg;
+    // Give menu items a chance to fade out before header collapses
+    transition: background-color .25s ease-in-out,
+                transform .25s ease-in-out,
+                height .25s 1s ease-in-out;
+
+    @include respond(md) {
+        height: $header-height-not-small;
+        padding: 0 50px;
+    }
+
+    &--rainbow {
+        background: linear-gradient(to right, #7A00A4, #623EC4);
+        color: #fff;
+    }
+
+    &--default {
+        position: fixed;
+    	transform: translateY(-100%);
+    }
+
+    // Added by default to the template.
+    // Adds fixed positioning.
+    &--fixed {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+
+    &--unpinned {
+        transform: translateY(-100%);
+    }
+
+    &--pinned {
+        transform: translateY(0);
+    }
+
+    // override embedded styles
+    &.header--open {
+        color: white;
+        background: black;
+    }
+
+    &--open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        height: 100vh;
+        transition: background-color .25s ease-in-out,
+                    height .25s ease-in-out;
+
+        .header-menuiconbar {
+            &:nth-child(1),
+            &:nth-child(4) {
+              top: $icon-bar-height + $icon-bar-spacing;
+              width: 0%;
+              left: 50%;
+            }
+
+            &:nth-child(2) {
+              transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+              transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $header-height-small;
+
+        @include respond(md) {
+            height: $header-height-not-small;
+        }
+    }
+
+    &-menutoggle {
+        // Remove button styling
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    &-menuicon {
+        width: $icon-width;
+        height: $icon-height;
+        position: relative;
+        pointer-events: none;
+        transform: rotate(0deg);
+        cursor: pointer;
+    }
+
+    &-menuiconbar {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: $icon-bar-height;
+        background: currentColor;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: all .25s ease-in-out;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          top: $icon-bar-height + $icon-bar-spacing;
+        }
+
+        &:nth-child(4) {
+          top: $icon-height - $icon-bar-height;
+        }
+    }
+
+    &-logo {
+        &:hover,
+        &:focus {
+            opacity: 0.8;
+        }
+        svg {
+            .header--open & path {
+                fill: white;
+            }
+        }
+    }
+}
+

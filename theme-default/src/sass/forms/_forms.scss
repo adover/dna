@@ -1,0 +1,73 @@
+/*
+# Textfields
+
+Text input fields
+
+Template: StyleGuide/SGTextField
+
+Styleguide 5.1
+*/
+
+$input-font-family: $font-sans-serif !default;
+$form-background-inverse: $color-mind-shaft !default;
+$input-color-default: $color-mind-shaft !default;
+$input-color-inverse: $color-white !default;
+$input-color-placeholder: $color-dusty-gray;
+
+form {
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='url'],
+    textarea {
+        font-family: $input-font-family;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: (30/24);
+        border: none;
+        outline: none;
+        border-radius: 0;
+        border-bottom: 1px solid currentColor;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 4px 0;
+        width: 100%;
+        height: 39px;
+		
+		&::placeholder {
+            color: $input-color-placeholder;
+        }
+
+    	@include respond(md) {
+    		font-size: 24px;
+    	}
+    }
+
+    &.form--default {
+        input[type='text'],
+        input[type='email'],
+        input[type='number'],
+        input[type='search'],
+        input[type='tel'],
+        input[type='url'],
+        textarea {
+            color: $input-color-default;
+        }
+    }
+
+    &.form--inverse {
+        background-color: $form-background-inverse;
+
+        input[type='text'],
+        input[type='email'],
+        input[type='number'],
+        input[type='search'],
+        input[type='tel'],
+        input[type='url'],
+        textarea {
+            color: $input-color-inverse;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.columns {
+    display: flex;
+
+    .column {
+        align-items: stretch;
+        flex: 1;
+    }
+}

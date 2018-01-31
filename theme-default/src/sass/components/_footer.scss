@@ -1,0 +1,124 @@
+/*
+#Footer
+
+Footer stub
+
+Template: Includes/Footer
+
+Styleguide 6.1
+
+*/
+
+$footer-transition-speed: 0.2s;
+$footer-transition-style: ease-in-out;
+$social-icon-size: 30px;
+$social-icon-size--desktop: 36px;
+
+.footer {
+	background-color: $footer-color;
+	color: $color-white;
+	font-family: $font-sans-serif;
+	font-size: $base-font-size - 2;
+
+	a {
+		color: $footer-link-color;
+		transition: opacity $footer-transition-speed $footer-transition-style;
+
+		&:visited {
+			color: $footer-link-color;
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&-nav {
+		li {
+			display: block;
+			font-size: 32px;
+
+			@include respond(lg) {
+				display: inline-block;
+			}
+
+            a{
+                padding: 1.2rem 1.2rem 1.2rem 0;
+                display: block;
+            }
+		}
+	}
+
+	&-signup {
+		padding: $spacing--lg 0;
+
+		@include respond(sm) {
+			padding: 0;
+		}
+
+		&email[type="email"] {
+			font-size: 24px;
+		}
+
+		&button {
+			background: none;
+			border: 2px solid white;
+			color: white;
+			display: block;
+			font-size: 24px;
+			line-height: 28px;
+			margin: $spacing--sm 0 0;
+			padding: 4px 12px;
+		}
+	}
+
+	&-social {
+		padding-top: $spacing--lg;
+
+		li {
+			display: inline-block;
+		}
+
+		&-link {
+			display: block;
+			margin-right: 28px;
+
+			@include respond(lg) {
+				margin-right: 45px;
+			}
+		}
+
+		.svg {
+			height: $social-icon-size;
+			width: $social-icon-size;
+
+			@include respond(md) {
+				height: $social-icon-size--desktop;
+				width: $social-icon-size--desktop;
+			}
+		}
+	}
+
+	&-copyright {
+		padding: 30px 0 0;
+	}
+
+	&-pipe {
+		display: none;
+		@include respond(lg) {
+			display: inline;
+			padding: 0;
+		}
+	}
+
+	&-copyrighttext {
+		color: $color-dusty-gray;
+		display: block;
+		padding-top: 7px;
+
+		@include respond(lg) {
+			display: inline;
+			padding: 0;
+		}
+	}
+}

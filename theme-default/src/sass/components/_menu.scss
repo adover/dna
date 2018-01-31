@@ -1,0 +1,80 @@
+/*
+#Menu
+
+Make menu
+
+Template: Includes/Menu
+
+Styleguide 6.5
+
+*/
+
+.menu {
+    visibility: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    .header--open & {
+        visibility: visible;
+    }
+
+    &-container {
+        overflow-y: auto;
+    }
+
+    &-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .header--open & {
+            > li {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &-item {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all .25s ease-in-out;
+
+        > a {
+            display: block;
+            font-family: $font-heading;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: (60/48);
+            color: $menu-link-color;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                color: $menu-link-hover-color;
+                transform: translateX(10px);
+            }
+        }
+    }
+
+    &-tagline {
+        font-family: $font-sans-serif;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: (35/34);
+        color: $color-white;
+        border-top: 1px solid $color-white;
+        margin-top: 43px;
+        padding-top: 24px;
+        transition: all .25s ease-in-out;
+    }
+}
+
+// "Stagger" transitions for menu items
+@for $i from 1 through 10 {
+    .menu-item:nth-child(#{$i}) {
+        transition-delay: #{$i * 100ms};
+    }
+}

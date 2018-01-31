@@ -1,0 +1,29 @@
+Page:
+  approach:
+    Title: "Approach"
+    Content: "Approach page"
+    ParentID: 0
+  work:
+    Title: "Work"
+    Content: "Work page"
+    ParentID: 0
+  thinking:
+    Title: "Thinking"
+    Content: "Thinking page"
+    ParentID: 0
+  people:
+    Title: "People"
+    Content: "People page"
+    ParentID: 0
+  jobs:
+    Title: "Jobs"
+    Content: "Jobs page"
+    ParentID: 0
+  privacy:
+    Title: "Privacy"
+    Content: "Privacy page"
+    ParentID: 0
+  terms:
+    Title: "Terms"
+    Content: "Terms page"
+    ParentID: 0

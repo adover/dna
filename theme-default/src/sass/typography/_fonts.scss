@@ -1,0 +1,65 @@
+/* Fonts */
+
+// Note: rucksack font helper process doesn't yet work with sass variables
+// font-url: '../../fonts/<fontname>/';
+// font-path: auto generates the file urls needed
+
+// Uses the rucksack font helper
+
+// TODO: These are TEST fonts, replace with real ones once the license is sorted.
+// Also, test files only come as woff, no woff2.
+@font-face {
+	font-family: 'Calibre';
+	font-path: '../../dist/fonts/calibre/CalibreTest-Regular';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibre';
+	font-path: '../../dist/fonts/calibre/CalibreTest-Medium';
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibre';
+	font-path: '../../dist/fonts/calibre/CalibreTest-Semibold';
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'TiemposHeadline';
+	font-path: '../../dist/fonts/tiempos-headline/TiemposHeadlineTest-Medium';
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TiemposText';
+	font-path: '../../dist/fonts/tiempos-text/TiemposTextTest-Regular';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TiemposText';
+	font-path: '../../dist/fonts/tiempos-text/TiemposTextTest-RegularItalic';
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'TiemposText';
+	font-path: '../../dist/fonts/tiempos-text/TiemposTextTest-Bold';
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TiemposText';
+	font-path: '../../dist/fonts/tiempos-text/TiemposTextTest-BoldItalic';
+	font-weight: 700;
+	font-style: italic;
+}

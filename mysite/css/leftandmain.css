@@ -1,0 +1,22 @@
+
+.inline-short-list .optionset .radio {
+    width: 100px;
+    display: inline-block;
+}
+
+/* enable a larger draggable area  */
+.tiledgrid .ss-gridfield-item {
+    position: relative;
+}
+
+.tiledgrid.ss-gridfield-orderable .col-reorder {
+    width: 100% !important;
+    min-width: 50px;
+    height: 100%;
+    position: absolute;
+}
+
+.tiledgrid .ss-gridfield-orderable .col-reorder:hover,
+.tiledgrid .ss-gridfield-orderable .col-reorder:focus {
+    border-left: 1px solid #333;
+}
